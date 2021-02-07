@@ -26,3 +26,10 @@ steps:
     working_directory: "${{clone}}"
     tag: "2"
     dockerfile: "Dockerfile"
+
+  sync_and_wait:
+    title: Sync ArgoCD app and wait
+    type: argocd-sync
+    arguments:
+      context: argocd
+      app_name: stars
