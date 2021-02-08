@@ -24,7 +24,7 @@ steps:
     type: "build"
     image_name: "einavl/moviestar"
     working_directory: "${{clone}}"
-    tag: "3"
+    tag: "4"
     dockerfile: "Dockerfile"
 
   sync_and_wait:
