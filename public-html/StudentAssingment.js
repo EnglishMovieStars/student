@@ -1,8 +1,11 @@
 import React, { lazy, Suspense } from "react";
-import ReactPlayer from "react-player";
 import { render } from "react-dom";
+import { css } from "@emotion/css";
 import YouTube from "react-youtube";
+import { ReactMediaRecorder } from "react-media-recorder";
 import Scene from "./Scene";
+import UploadFile from "./UploadFile";
+import Recorder from "./Recorder";
 
 const StudentAssingment = () => {
   //   state = { actor: "Simba" };
@@ -18,13 +21,32 @@ const StudentAssingment = () => {
   };
 
   return (
-    <div>
+    <div
+      className={css`
+        margin-left: 70px;
+      `}
+    >
       <div className="youtube-player">
-        <YouTube videoId="Hj1bin9Y4Ko" opts={opts} />
+        <YouTube
+          videoId="Hj1bin9Y4Ko"
+          opts={opts}
+          width="400px"
+          height="400px"
+        />
       </div>
-      <div className="fullscript">
-        <h1>We Are All Connected</h1>
+      <div>
         <Scene />
+      </div>
+
+      <div
+      // className={css`
+      //   margin-left: 900px;
+      // `}
+      >
+        <div>
+          <Recorder />
+        </div>
+        <UploadFile />
       </div>
 
       <div className="buttons">
