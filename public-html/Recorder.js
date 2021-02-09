@@ -2,20 +2,39 @@ import React, { Component } from "react";
 import { ReactMediaRecorder } from "react-media-recorder";
 
 class Recorder extends Component {
+  state = {
+    startRecordingEnable: true,
+  };
   saveRecording() {
     recording = ReactMediaRecorder.requestData();
   }
 
+  setStartRecordingEnable = (func) => {
+    return () => {
+      func();
+
+      this.setState({ startRecordingEnable: !this.state.startRecordingEnable });
+    };
+  };
+
   render() {
+    const { startRecordingEnable } = this.state;
     return (
       <ReactMediaRecorder
-        video
-        render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
+        audio
+        render={({ startRecording, stopRecording, mediaBlobUrl }) => (
           <div>
-            <button onClick={startRecording}>Start Recording</button> <br />
-            <button onClick={stopRecording}>Stop Recording</button> <br />
+            {startRecordingEnable ? (
+              <button onClick={this.setStartRecordingEnable(startRecording)}>
+                Start Recording
+              </button>
+            ) : (
+              <button onClick={this.setStartRecordingEnable(stopRecording)}>
+                Stop Recording
+              </button>
+            )}
+            <br />
             <video src={mediaBlobUrl} controls autoPlay loop /> <br />
-            <button onClick={this.saveRecording}>Save Recording</button>
           </div>
         )}
       />

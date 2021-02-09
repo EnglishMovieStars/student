@@ -2,15 +2,13 @@ import React, { lazy, Suspense } from "react";
 import { render } from "react-dom";
 import { css } from "@emotion/css";
 import YouTube from "react-youtube";
-import { ReactMediaRecorder } from "react-media-recorder";
 import Scene from "./Scene";
 import UploadFile from "./UploadFile";
 import Recorder from "./Recorder";
+import Score from "./Score";
 
 const StudentAssingment = () => {
-  //   state = { actor: "Simba" };
-  // record = () => {};
-  // send = () => {};
+  const character = "Simba";
 
   const opts = {
     height: "390",
@@ -26,6 +24,7 @@ const StudentAssingment = () => {
         margin-left: 70px;
       `}
     >
+      <h1>you will be playing {character}</h1>
       <div className="youtube-player">
         <YouTube
           videoId="Hj1bin9Y4Ko"
@@ -35,7 +34,7 @@ const StudentAssingment = () => {
         />
       </div>
       <div>
-        <Scene />
+        <Scene character={character} />
       </div>
 
       <div
@@ -45,13 +44,12 @@ const StudentAssingment = () => {
       >
         <div>
           <Recorder />
-        </div>
-        <UploadFile />
-      </div>
 
-      <div className="buttons">
-        {/* <button>record</button>
-        <button>send</button> */}
+          <UploadFile />
+        </div>
+        <br />
+        <Score />
+        <br />
       </div>
     </div>
   );

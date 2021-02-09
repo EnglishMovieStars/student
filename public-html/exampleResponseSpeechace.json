@@ -1,0 +1,66 @@
+{
+  "status": "success",
+  "quota_remaining": -1,
+  "text_score": {
+    "text": "apple",
+    "quality_score": 100,
+    "word_score_list": [
+      {
+        "word": "apple",
+        "quality_score": 100,
+        "phone_score_list": [
+          {
+            "phone": "ae",
+            "stress_level": 1,
+            "extent": [9, 25],
+            "quality_score": 99.75,
+            "stress_score": 100,
+            "sound_most_like": "ae"
+          },
+          {
+            "phone": "p",
+            "stress_level": null,
+            "extent": [25, 35],
+            "quality_score": 100,
+            "sound_most_like": "p"
+          },
+          {
+            "phone": "ah",
+            "stress_level": 0,
+            "extent": [35, 39],
+            "quality_score": 100,
+            "stress_score": 100,
+            "sound_most_like": "ah"
+          },
+          {
+            "phone": "l",
+            "stress_level": null,
+            "extent": [39, 57],
+            "quality_score": 99.66666666666667,
+            "sound_most_like": "l"
+          }
+        ],
+        "syllable_score_list": [
+          {
+            "phone_count": 1,
+            "stress_level": 1,
+            "letters": "a",
+            "quality_score": 100,
+            "stress_score": 100,
+            "extent": [9, 25]
+          },
+          {
+            "phone_count": 3,
+            "stress_level": 0,
+            "letters": "pple",
+            "quality_score": 100,
+            "stress_score": 100,
+            "extent": [25, 57]
+          }
+        ]
+      }
+    ],
+    "fidelity_class": "CORRECT"
+  },
+  "version": "0.5"
+}

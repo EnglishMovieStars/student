@@ -31,7 +31,14 @@ class UploadFile extends Component {
 
     // Request made to the backend api
     // Send formData object
-    axios.post("api/uploadfile", formData);
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: formData,
+    };
+    fetch("http://localhost:5000/files", requestOptions)
+      .then((response) => response.json())
+      .then((data) => this.setState({ postId: data.id }));
   };
 
   // File content to be displayed after

@@ -27,3 +27,6 @@ body {
   display: inline-block;
   margin-right: 15px;
 }
+.scene-text {
+  display: inline-block;
+}
