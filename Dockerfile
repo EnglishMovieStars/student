@@ -1,4 +1,9 @@
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY ./package.json /usr/local/apache2/
-COPY ./package-lock.json /usr/local/apache2/
+FROM  node:14
+
+WORKDIR /app
+RUN mkdir /app/public-html
+COPY ./public-html /app/public-html
+COPY ./package.json /app
+COPY ./package-lock.json /app
+RUN npm install
+CMD ["npm","run","dev"]
