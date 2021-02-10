@@ -71,7 +71,9 @@ class UploadFile extends Component {
         <div>
           <input type="file" onChange={this.onFileChange} />
           <br />
-          <button onClick={this.onFileUpload}>Upload!</button>
+          <button className="buttons" onClick={this.onFileUpload}>
+            Upload!
+          </button>
         </div>
         {this.fileData()}
       </div>
