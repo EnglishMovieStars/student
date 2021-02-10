@@ -25,11 +25,17 @@ class Recorder extends Component {
         render={({ startRecording, stopRecording, mediaBlobUrl }) => (
           <div>
             {startRecordingEnable ? (
-              <button onClick={this.setStartRecordingEnable(startRecording)}>
+              <button
+                className="buttons"
+                onClick={this.setStartRecordingEnable(startRecording)}
+              >
                 Start Recording
               </button>
             ) : (
-              <button onClick={this.setStartRecordingEnable(stopRecording)}>
+              <button
+                className="buttons"
+                onClick={this.setStartRecordingEnable(stopRecording)}
+              >
                 Stop Recording
               </button>
             )}

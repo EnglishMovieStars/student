@@ -30,7 +30,9 @@ class Score extends Component {
 
     return (
       <div>
-        <button onClick={this.getScore}>Check my score</button>
+        <button className="buttons" onClick={this.getScore}>
+          Check my score
+        </button>
         <br />
         {avarege_quality_score > 0 ? (
           <label> quality score: {avarege_quality_score}</label>
@@ -41,7 +43,9 @@ class Score extends Component {
         ) : null}
         <br />
         <br />
-        <button onClick={this.sendToTeacher}>Send to my teacher</button>
+        <button className="buttons" onClick={this.sendToTeacher}>
+          Send to my teacher
+        </button>
       </div>
     );
   }
