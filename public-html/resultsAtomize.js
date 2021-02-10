@@ -1,8 +1,4 @@
 import React from 'react';
-import {
-  Button,
-  Icon
-} from 'atomize';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,9 +7,10 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { render } from 'react-dom';
 
 
-const resultsAtomize = () => {
+const ResultsAtomize = () => {
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -38,14 +35,8 @@ const resultsAtomize = () => {
   }
 
   const button =
-    <Button
-      w="2.5rem"
-      bg="white"
-      border="1px solid"
-      borderColor="brand800"
-      m={{ b: "0.5rem" }}
-      rounded="brandRadius"
-      suffix={<Icon name="Card" size="10px" color="brand800" />} />
+    <button> Display </button>
+    
 
 
 
@@ -66,7 +57,7 @@ const resultsAtomize = () => {
 
   const classes = useStyles();
 
-function render () {
+
   return (
     <div>
       <TableContainer component={Paper}>
@@ -74,7 +65,7 @@ function render () {
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="right">Movie&nbsp</StyledTableCell>
+              <StyledTableCell align="right">Movie&nbsp;</StyledTableCell>
               <StyledTableCell align="right">Score&nbsp;(g)</StyledTableCell>
               <StyledTableCell align="right">Open Details&nbsp;(g)</StyledTableCell>
             </TableRow>
@@ -96,6 +87,6 @@ function render () {
     </div>
   );
             };
-}
+            render(<ResultsAtomize />, document.getElementById("root"));
 
 
