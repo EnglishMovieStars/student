@@ -35,7 +35,8 @@ const ResultsAtomize = () => {
   }
 
   const button =
-    <button> display </button>
+    <button> Display </button>
+    
 
 
 
@@ -64,7 +65,7 @@ const ResultsAtomize = () => {
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="right">Movie&nbsp</StyledTableCell>
+              <StyledTableCell align="right">Movie&nbsp;</StyledTableCell>
               <StyledTableCell align="right">Score&nbsp;(g)</StyledTableCell>
               <StyledTableCell align="right">Open Details&nbsp;(g)</StyledTableCell>
             </TableRow>
